@@ -27,12 +27,6 @@ RSpec.describe Spree::Order do
           to receive(:use_sequential_number?).
           and_return(false)
       end
-
-      it 'does not update invoice number' do
-        expect {
-          order.update_invoice_number!
-        }.to_not change(order, :invoice_number)
-      end
     end
   end
 
